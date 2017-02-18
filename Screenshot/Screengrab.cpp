@@ -7,7 +7,6 @@ Screengrab::Screengrab()
 {
 }
 
-
 Screengrab::~Screengrab()
 {
 }
@@ -29,6 +28,7 @@ Screengrab::~Screengrab()
 //      Note: This sample will attempt to create a file called captureqwsx.bmp 
 //        
 
+//截一張螢幕截圖到window並儲存成.bmp檔案
 int Screengrab::CaptureAnImage(HWND hWnd, std::wstring imageFilename)
 {
     HDC hdcScreen;
@@ -172,6 +172,7 @@ done:
     return 0;
 }
 
+//間隔式截圖，每隔一段時間將會截一張圖
 int Screengrab::CaptureImagesOnInterval(HWND hWnd){
     std::wstring baseFilename = L"tmp/myscreenshot.";
     int i = 0;
